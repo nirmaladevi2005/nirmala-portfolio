@@ -20,6 +20,8 @@ import {
   Info,
   CheckCircle2,
   Layers,
+  Youtube,
+  ArrowUpRight,
 } from 'lucide-react';
 
 // Helper to check if a string contains verified text without placeholder brackets
@@ -318,6 +320,38 @@ export const ArtGallerySection: React.FC = () => {
             );
           })}
         </div>
+
+        {/* Creative Art YouTube Channel Callout */}
+        <RevealOnScroll variant="revealUp">
+          <div className="relative p-6 sm:p-7 rounded-2xl bg-[#0D0D1A]/90 border border-white/10 backdrop-blur-md overflow-hidden transition-all duration-300 hover:border-[#8B5CF6]/40 shadow-xl group">
+            <div className="absolute -top-12 -right-12 w-48 h-48 bg-[#8B5CF6]/15 rounded-full blur-3xl pointer-events-none group-hover:bg-red-500/10 transition-colors duration-500" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
+
+            <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 font-mono text-xs text-[#C4B5FD]">
+                  <Sparkles className="w-3.5 h-3.5 text-[#38BDF8]" />
+                  <span className="uppercase tracking-wider font-semibold">Creative Journey & Process</span>
+                </div>
+                <p className="text-sm text-[#94A3B8] leading-relaxed">
+                  Discover more of my artwork, sketches, and creative journey.
+                </p>
+              </div>
+
+              <a
+                href="https://www.youtube.com/@Artistic_Nirmala"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#131326] border border-white/15 text-xs font-mono text-[#F8FAFC] hover:text-white hover:border-[#8B5CF6]/60 hover:bg-[#8B5CF6]/15 transition-all hover:scale-105 shrink-0 self-start sm:self-auto group/btn focus:outline-none focus:ring-2 focus:ring-[#8B5CF6]"
+                aria-label="Explore my art on YouTube (opens @Artistic_Nirmala in new tab)"
+              >
+                <Youtube className="w-4 h-4 text-red-500 transition-transform group-hover/btn:scale-110" />
+                <span className="font-medium">Explore my art on YouTube</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#C4B5FD]" />
+              </a>
+            </div>
+          </div>
+        </RevealOnScroll>
       </div>
 
       {/* Accessible Fullscreen Lightbox Modal */}
