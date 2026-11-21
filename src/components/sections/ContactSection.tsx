@@ -5,16 +5,15 @@ import { portfolioData } from '../../config/portfolioData';
 import { GlassCard } from '../ui/GlassCard';
 import { MagneticButton } from '../ui/MagneticButton';
 import { Badge } from '../ui/Badge';
-import { Mail, ArrowUpRight, Github, Linkedin, Twitter, Sparkles } from 'lucide-react';
+import { Mail, ArrowUpRight, Github, Linkedin, Sparkles } from 'lucide-react';
 
 export const ContactSection: React.FC = () => {
   const { tagline, email, availabilityStatus, socials } = portfolioData.contact;
 
   const socialIconMap: Record<string, React.ReactNode> = {
-    Github: <Github className="w-4 h-4" />,
-    Linkedin: <Linkedin className="w-4 h-4" />,
-    Twitter: <Twitter className="w-4 h-4" />,
-    Mail: <Mail className="w-4 h-4" />,
+    Github: <Github className="w-4 h-4 text-[#8B5CF6]" />,
+    Linkedin: <Linkedin className="w-4 h-4 text-[#38BDF8]" />,
+    Mail: <Mail className="w-4 h-4 text-[#C4B5FD]" />,
   };
 
   return (
@@ -54,8 +53,8 @@ export const ContactSection: React.FC = () => {
               </p>
             </div>
 
-            {/* Email CTA Button */}
-            <div className="pt-4 flex justify-center">
+            {/* Email CTA Button & Direct Address */}
+            <div className="pt-4 flex flex-col items-center gap-3">
               <MagneticButton
                 variant="primary"
                 size="lg"
@@ -64,22 +63,31 @@ export const ContactSection: React.FC = () => {
               >
                 Send an Email
               </MagneticButton>
+              <a
+                href={`mailto:${email}`}
+                className="font-mono text-xs sm:text-sm text-[#C4B5FD] hover:text-[#F8FAFC] transition-colors underline underline-offset-4 decoration-[#8B5CF6]/50 hover:decoration-[#38BDF8]"
+              >
+                {email}
+              </a>
             </div>
 
             {/* Social Links Row */}
             <div className="pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-4 text-xs font-mono">
-              {socials.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel text-[#94A3B8] hover:text-[#F8FAFC] hover:border-[#8B5CF6]/40 transition-all"
-                >
-                  {socialIconMap[social.iconName] || <Mail className="w-4 h-4" />}
-                  <span>{social.name}</span>
-                </a>
-              ))}
+              {socials.map((social) => {
+                const isMail = social.href.startsWith('mailto:');
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    {...(!isMail && { target: '_blank', rel: 'noopener noreferrer' })}
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass-panel text-[#94A3B8] hover:text-[#F8FAFC] hover:border-[#8B5CF6]/40 transition-all hover:scale-105"
+                  >
+                    {socialIconMap[social.iconName] || <Mail className="w-4 h-4 text-[#C4B5FD]" />}
+                    <span>{social.name}</span>
+                    {!isMail && <ArrowUpRight className="w-3 h-3 text-[#94A3B8]/60" />}
+                  </a>
+                );
+              })}
             </div>
 
           </div>

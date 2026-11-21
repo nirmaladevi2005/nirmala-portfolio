@@ -31,10 +31,9 @@ export const siteConfig: SiteConfig = {
     { number: '07', label: 'Certifications', href: '#certifications' },
   ],
   socials: [
-    { name: 'GitHub', href: 'https://github.com/[YOUR_GITHUB_HANDLE]', iconName: 'Github' },
-    { name: 'LinkedIn', href: 'https://linkedin.com/in/[YOUR_LINKEDIN_HANDLE]', iconName: 'Linkedin' },
-    { name: 'X / Twitter', href: 'https://x.com/[YOUR_TWITTER_HANDLE]', iconName: 'Twitter' },
-    { name: 'Email', href: 'mailto:[YOUR_EMAIL_ADDRESS]', iconName: 'Mail' },
+    { name: 'GitHub', href: 'https://github.com/nirmaladevi2005', iconName: 'Github' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/nirmaladevipatel2005/', iconName: 'Linkedin' },
+    { name: 'Email', href: 'mailto:nirmaladevipatel2005@gmail.com', iconName: 'Mail' },
   ],
   stats: [
     { label: 'Education', value: 'B.Tech CS', subtext: 'Computer Science & Engineering' },

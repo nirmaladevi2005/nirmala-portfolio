@@ -484,14 +484,13 @@ export const portfolioData: CompletePortfolioData = {
 
   contact: {
     tagline: "HAVE AN IDEA? LET'S BUILD IT.",
-    email: '[YOUR_EMAIL_ADDRESS@EXAMPLE.COM]',
+    email: 'nirmaladevipatel2005@gmail.com',
     location: '[CITY, STATE, COUNTRY]',
     availabilityStatus: 'Available for internships, freelance projects, & hackathons',
     socials: [
-      { name: 'GitHub', href: 'https://github.com/[YOUR_GITHUB_HANDLE]', iconName: 'Github' },
-      { name: 'LinkedIn', href: 'https://linkedin.com/in/[YOUR_LINKEDIN_HANDLE]', iconName: 'Linkedin' },
-      { name: 'X / Twitter', href: 'https://x.com/[YOUR_TWITTER_HANDLE]', iconName: 'Twitter' },
-      { name: 'Email', href: 'mailto:[YOUR_EMAIL_ADDRESS@EXAMPLE.COM]', iconName: 'Mail' }
+      { name: 'GitHub', href: 'https://github.com/nirmaladevi2005', iconName: 'Github' },
+      { name: 'LinkedIn', href: 'https://www.linkedin.com/in/nirmaladevipatel2005/', iconName: 'Linkedin' },
+      { name: 'Email', href: 'mailto:nirmaladevipatel2005@gmail.com', iconName: 'Mail' }
     ]
   }
 };
