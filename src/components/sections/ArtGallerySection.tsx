@@ -345,26 +345,37 @@ export const ArtGallerySection: React.FC = () => {
                 </div>
 
                 {/* Primary Heading with Channel Name */}
-                <div className="space-y-1.5">
+                <div className="space-y-2.5">
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#F8FAFC] tracking-tight">
-                    My Creative Side <span className="text-[#C4B5FD] font-light">—</span>{' '}
-                    <span className="bg-gradient-to-r from-[#F8FAFC] via-[#C4B5FD] to-[#38BDF8] bg-clip-text text-transparent">
-                      Artistic Nirmala
-                    </span>
+                    My Creative Side
                   </h3>
-                  <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed">
+
+                  {/* Channel Badge with YouTube Icon & Name */}
+                  <div className="flex items-center gap-2.5">
+                    <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-xl bg-[#050510]/90 border border-white/10 shadow-sm">
+                      <div className="flex items-center justify-center w-5 h-5 rounded-full bg-red-500/10">
+                        <Youtube className="w-4 h-4 text-red-500" />
+                      </div>
+                      <span className="text-sm sm:text-base font-bold text-[#F8FAFC]">
+                        Artistic Nirmala
+                      </span>
+                      <span className="text-xs font-mono text-[#C4B5FD]/80">
+                        (@Artistic_Nirmala)
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Supporting Text */}
+                  <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed pt-0.5">
                     Explore my pencil sketches, artwork, and creative journey beyond the world of code.
                   </p>
                 </div>
 
-                {/* Channel Handle & Content Pill */}
-                <div className="flex flex-wrap items-center gap-2 text-xs font-mono pt-1">
-                  <span className="px-2.5 py-1 rounded-md bg-[#050510]/80 border border-white/10 text-[#C4B5FD]">
-                    @Artistic_Nirmala
-                  </span>
-                  <span className="text-white/20 hidden sm:inline">•</span>
-                  <span className="text-[#94A3B8] text-[11px] sm:text-xs">
-                    Time-lapse Drawing · Studies · Realistic Portraits
+                {/* Content Attributes Pill */}
+                <div className="flex flex-wrap items-center gap-2 text-xs font-mono pt-1 text-[#94A3B8]">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#050510]/80 border border-white/10 text-[#C4B5FD]">
+                    <Sparkles className="w-3 h-3 text-[#38BDF8]" />
+                    <span>Time-lapse Drawing & Realistic Studies</span>
                   </span>
                 </div>
               </div>
