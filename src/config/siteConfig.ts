@@ -29,6 +29,7 @@ export const siteConfig: SiteConfig = {
     { number: '05', label: 'Experience', href: '#experience' },
     { number: '06', label: 'Achievements', href: '#achievements' },
     { number: '07', label: 'Certifications', href: '#certifications' },
+    { number: 'CV', label: 'Resume', href: '#resume' },
   ],
   socials: [
     { name: 'GitHub', href: 'https://github.com/nirmaladevi2005', iconName: 'Github' },

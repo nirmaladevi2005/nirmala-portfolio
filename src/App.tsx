@@ -10,6 +10,7 @@ import { SkillsSection } from './components/sections/SkillsSection';
 import { ExperienceSection } from './components/sections/ExperienceSection';
 import { AchievementsSection } from './components/sections/AchievementsSection';
 import { CertificationsSection } from './components/sections/CertificationsSection';
+import { ResumeSection } from './components/sections/ResumeSection';
 import { ArtGallerySection } from './components/sections/ArtGallerySection';
 import { ContactSection } from './components/sections/ContactSection';
 import { Footer } from './components/layout/Footer';
@@ -52,7 +53,10 @@ export function App() {
         {/* 07 // CERTIFICATIONS & TRAINING — Verified Credentials & Coursework */}
         <CertificationsSection />
 
-        {/* 08 // BEYOND THE CODE — Fine Pencil Portrait Gallery & Fullscreen Lightbox */}
+        {/* 08 // RESUME — Official Curriculum Vitae (View & Download) */}
+        <ResumeSection />
+
+        {/* 09 // BEYOND THE CODE — Fine Pencil Portrait Gallery & Fullscreen Lightbox */}
         <ArtGallerySection />
 
         {/* 09 // CONTACT — Collaboration & Inquiry Canvas */}

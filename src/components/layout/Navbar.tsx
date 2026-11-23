@@ -24,6 +24,7 @@ export const Navbar: React.FC = () => {
         'experience',
         'achievements',
         'certifications',
+        'resume',
         'art',
         'contact',
       ];
@@ -42,7 +43,8 @@ export const Navbar: React.FC = () => {
               section === 'skills' ||
               section === 'experience' ||
               section === 'achievements' ||
-              section === 'certifications'
+              section === 'certifications' ||
+              section === 'resume'
             ) {
               setActiveSection('projects');
             } else {
